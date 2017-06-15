@@ -34,7 +34,7 @@ public class commonprefix
         }
         if(count==len)
             {
-                System.out.println("the common prefix is "+mins);
+                System.out.println("the longest common prefix is "+mins);
             }
             else
             {
@@ -48,7 +48,7 @@ public class commonprefix
                     }
                     if(cc==len)
                     {
-                        System.out.println("the common prefix is "+sp);
+                        System.out.println("the longest common prefix is "+sp);
                         break;
                     }
                   v++;  

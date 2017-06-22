@@ -6,37 +6,27 @@ public static void main(String args[])
 Scanner sc=new Scanner(System.in);
 System.out.println("enter a String");
 String s=sc.nextLine();
+int count=0;
 String sss=s.replaceAll(" ","");
 String ss=sss.toLowerCase();
-int flag=0,count=0,count1=0;
-char c[]=ss.toCharArray();
-int arr[]=new int[ss.length()];
-for(int i=0;i<c.length;i++)
+for(char i='a';i<='z';i++)
 {
-	arr[i]=(int)c[i];
-}
-Arrays.sort(arr);
-for(int j=0;j<arr.length;j++)
-{
-	for(int k=97;k>=122;k++)
+	for(int j=0;j<ss.length();j++)
 	{
-		if(arr[j]==arr[k])
+		if(i==ss.charAt(j))
 		{
-			count=count+1;
-		}
-		if(count>0)
-		{
-			count1=count1+1;
+			count++;
+			 ss=ss.replaceAll(String.valueOf(i),"");
 		}
 	}
 }
-if(count1==26)
+if(count==26)
 {
-System.out.println("yes its a pangram");
+	System.out.println("pangram");
 }
 else
 {
-	System.out.println("no its not a pangram");
+	System.out.println("not a pangram");
 }
 }
 }

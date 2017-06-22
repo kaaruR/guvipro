@@ -1,5 +1,5 @@
 import java.util.*;
-public class pro69
+public class proqns69
 {
 public static void main(String args[])
 {
